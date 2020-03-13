@@ -188,8 +188,7 @@ function getCapital($id){
     $prep = $pdo->prepare($requete);
     $prep->bindValue(':id', $id);
     $prep->execute();
-
-    $result = $prep->fetchAll()[0];
+    $result = $prep->fetchAll();
     return $result;
 }
 
