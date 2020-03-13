@@ -34,7 +34,7 @@ $continents = getContinents();
     <body class="d-flex flex-column h-100">
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="home.php">GeoWorld</a>
+            <a class="navbar-brand" href="index.php">GeoWorld</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
                     aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -94,9 +94,10 @@ $continents = getContinents();
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" name="Search" aria-label="Search" action="index.php" >
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" name="Search" aria-label="Search" action="home.php" >
                     <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </nav>
     </header>
+</body>
