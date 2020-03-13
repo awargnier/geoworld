@@ -31,8 +31,7 @@ if (isset($_GET['Search'])) {
                         <thead>
                         <tr>
                             <!--th>id </th-->
-                            <th scope="col" class="col-lg-7" ><h5 align="center"> Name</h5></th>
-                            <th scope="col" class="col-5" ><h5 align="center">Update</h5></th>
+                            <th scope="col" class="col-lg-12" ><h5 align="center"> Name</h5></th>
 
                         </tr>
                         </thead>
@@ -41,9 +40,6 @@ if (isset($_GET['Search'])) {
                             <tr>
                                 <!--td> <?php echo (htmlentities($value->id)); ?> </td-->
                                 <td scope="row" class="col-3" align="center"> <a href="infoPays.php?id=<?php echo (htmlentities($value->id));?>&code=<?php echo(htmlentities($value->Code2)) ;?>"> <?php echo(htmlentities($value->Name)) ;?> </a> </td>
-                                <?php if(!empty($_SESSION['role'])&& $_SESSION['role']=='admin' || !empty($_SESSION['role']) && $_SESSION['role'] == 'enseignant'):?>
-                                    <td class="col-3" align="center"> <a href="MajCountry.php?id=<?php echo(htmlentities($value->id)) ;?>"><img src="images/icons/engrenage2.png" width="10%"> </a>  </td>
-                                <?php endif; ?>
                             </tr>
                         <?php endforeach;?>
                         </tbody>
