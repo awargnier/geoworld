@@ -32,7 +32,7 @@ require_once 'inc/manager-db.php';
 <section id="hero">
     <div class="hero-container">
         <h1>Welcome to GeoWorld</h1>
-        <h2>Find out everything he’s seen about the world</h2>
+        <h2>Find out everything that has to be seen about the world</h2>
         <a href="WorldMap.php" class="btn-get-started">Get Started</a>
     </div>
 </section><!-- #hero -->

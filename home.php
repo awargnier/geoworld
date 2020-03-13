@@ -1,6 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/custom.css"
+
+</head>
 <?php require_once 'header.php';
 require_once('inc/connect-db.php');
 require_once 'inc/manager-db.php';
+
 
 
 $continent = (empty($_GET['continent']) ? 'Europe' : $_GET['continent']);
@@ -18,38 +27,21 @@ if (isset($_GET['Search'])) {
 }
 
 ?>
-    <div class="container" align="center">
-        <h1>Countries in <?php echo(htmlentities($continent)) ?></h1>
-    </div>
 
-    <p></p>
-    <div class="container-fluid py-5">
-        <div class="row">
-            <div class="col-lg-auto mx-auto  " >
-                <div class="table-responsive">
-                    <table  class="table table-fixed">
-                        <thead>
-                        <tr>
-                            <!--th>id </th-->
-                            <th scope="col" class="col-lg-12" ><h5 align="center"> Name</h5></th>
+<body>
+<div class="container" align="center">
+    <h1>Countries in <?php echo(htmlentities($continent)) ?></h1>
 
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($desPays as $value): ?>
-                            <tr>
-                                <!--td> <?php echo (htmlentities($value->id)); ?> </td-->
-                                <td scope="row" class="col-3" align="center"> <a href="infoPays.php?id=<?php echo (htmlentities($value->id));?>"> <?php echo(htmlentities($value->Name)) ;?> </a> </td>
-                            </tr>
-                        <?php endforeach;?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    <?php foreach ($desPays as $value): ?>
 
-    </main>
+    <ul id="myUL">
+        <!--td> <?php echo (htmlentities($value->id)); ?> </td-->
+        <li > <a href="infoPays.php?id=<?php echo (htmlentities($value->id));?>"> <?php echo(htmlentities($value->Name)) ;?> </a></li>
+        <?php endforeach;?>
+    </ul>
+</div>
+</html>
 
 <?php
 require_once 'javascripts.php';
