@@ -42,7 +42,7 @@ if (isset($_GET['Search'])) {
                                 <!--td> <?php echo (htmlentities($value->id)); ?> </td-->
                                 <td scope="row" class="col-3" align="center"> <a href="infoPays.php?id=<?php echo (htmlentities($value->id));?>&code=<?php echo(htmlentities($value->Code2)) ;?>"> <?php echo(htmlentities($value->Name)) ;?> </a> </td>
                                 <?php if(!empty($_SESSION['role'])&& $_SESSION['role']=='admin' || !empty($_SESSION['role']) && $_SESSION['role'] == 'enseignant'):?>
-                                    <td class="col-3" align="center"> <a href="MajCountry.php?id=<?php echo(htmlentities($value->id)) ;?>"><img src="images/icons/engrenage2.png" width="15%"> </a>  </td>
+                                    <td class="col-3" align="center"> <a href="MajCountry.php?id=<?php echo(htmlentities($value->id)) ;?>"><img src="images/icons/engrenage2.png" width="10%"> </a>  </td>
                                 <?php endif; ?>
                             </tr>
                         <?php endforeach;?>
