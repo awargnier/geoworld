@@ -12,7 +12,7 @@ if (isset($_POST['login']) && isset($_POST['pwd']) && !empty($_POST['login'])&& 
         $_SESSION['prenom'] = $result->prenom;
 
 
-        header('location:../index.php');
+        header('location:../WorldMap.php');
     }
 
     else{
