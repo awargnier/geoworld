@@ -39,7 +39,7 @@ if (isset($_GET['Search'])) {
                         <?php foreach ($desPays as $value): ?>
                             <tr>
                                 <!--td> <?php echo (htmlentities($value->id)); ?> </td-->
-                                <td scope="row" class="col-3" align="center"> <a href="infoPays.php?id=<?php echo (htmlentities($value->id));?>&code=<?php echo(htmlentities($value->Code2)) ;?>"> <?php echo(htmlentities($value->Name)) ;?> </a> </td>
+                                <td scope="row" class="col-3" align="center"> <a href="infoPays.php?id=<?php echo (htmlentities($value->id));?>"> <?php echo(htmlentities($value->Name)) ;?> </a> </td>
                             </tr>
                         <?php endforeach;?>
                         </tbody>

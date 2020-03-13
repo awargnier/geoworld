@@ -4,12 +4,11 @@ require_once ('inc/connect-db.php');
 require_once 'inc/manager-db.php';
 
 
-$drapeauMaj=$_GET['code'];
-$drapeau = strtolower($drapeauMaj);
+
 
 $id = $_GET['id'];
 $country = getCountryId($id);
-
+$drapeau = strtolower($country->Code2);
 $Capital = getCapital($id);
 
 $language = getLanguage($id)
