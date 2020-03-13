@@ -56,7 +56,7 @@ $continents = getContinents();
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
 
                             <?php foreach ($continents as $nomContinent): ?>
-                                <a class="dropdown-item" href="index.php?continent=<?php echo(htmlentities($nomContinent->continent)) ?>"><?php echo(htmlentities( $nomContinent->continent)) ?></a>
+                                <a class="dropdown-item" href="home.php?continent=<?php echo(htmlentities($nomContinent->continent)) ?>"><?php echo(htmlentities( $nomContinent->continent)) ?></a>
                             <?php endforeach;?>
 
 
