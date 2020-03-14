@@ -1,7 +1,7 @@
 <?php
 require_once('inc/connect-db.php');
 require_once 'inc/manager-db.php';
-$continents = getContinents();
+
 ?>
 
 <head>
