@@ -90,7 +90,7 @@ require_once 'inc/manager-db.php';
                                     data:{
                                         labels:['Chinese','Spanish','English','Hindi','Arab','Portuguese','Bengali','Russian','Japanese','Punjabi/Lahnda'],
                                         datasets:[{
-                                            label:'Language',
+                                            label:'Langage',
                                             data:[
                                                 1200000000,
                                                 400000000,
