@@ -27,6 +27,10 @@ require_once 'inc/manager-db.php';
     <!-- Main Stylesheet File -->
     <link href="regna/css/style.css" rel="stylesheet">
 
+    <!-- graph -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
 </head>
 <body>
 
@@ -47,7 +51,6 @@ require_once 'inc/manager-db.php';
                         <h2 class="title">About the world</h2>
 
                         <div class="icon-box wow fadeInUp">
-                            <div></div>
                             <h4 class="title">The largest continent</h4>
                             <p class="description">The largest continent in the world is Asia. Asia, with 4,463 billion people and 48 countries (according to the United Nations) is the largest in the world.</p>
                             <p class="description">Here is a list with the surface of each of them :</p>
@@ -62,7 +65,6 @@ require_once 'inc/manager-db.php';
                         </div>
 
                         <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-                            <div></div>
                             <h4 class="title">The most populated continent</h4>
                             <p class="description">Asia represents more than half of the world’s population with 4.6 billion inhabitants</p>
                             <ol class="description">
@@ -74,6 +76,40 @@ require_once 'inc/manager-db.php';
                             </ol>
                         </div>
 
+                        <div class="icon-box wow fadeInUp">
+                            <h4 class="title">The languages that speak the most</h4>
+                            <div class="container">
+                                <canvas id="myChart"></canvas>
+                            </div>
+
+                            <script>
+                                let myChart = document.getElementById('myChart').getContext('2d');
+
+                                let massPopChart = new Chart(myChart, {
+                                    type:'bar',
+                                    data:{
+                                        labels:['Chinese','Spanish','English','Hindi','Arab','Portuguese','Bengali','Russian','Japanese','Punjabi/Lahnda'],
+                                        datasets:[{
+                                            label:'Language',
+                                            data:[
+                                                1200000000,
+                                                400000000,
+                                                360000000,
+                                                322000000,
+                                                250000000,
+                                                215000000,
+                                                170000000,
+                                                145000000,
+                                                130000000,
+                                                100000000
+                                            ],
+                                            backgroundColor:'silver'
+                                        }]
+                                    },
+                                    options:{}
+                                });
+                            </script>
+                        </div>
 
                     </div>
 
