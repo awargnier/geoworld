@@ -77,7 +77,7 @@ require_once 'inc/manager-db.php';
                         </div>
 
                         <div class="icon-box wow fadeInUp">
-                            <h4 class="title">The most spoken langages</h4>
+                            <h4 class="title">The most spoken languages</h4>
                             <div class="container">
                                 <canvas id="myChart"></canvas>
                             </div>
@@ -90,7 +90,7 @@ require_once 'inc/manager-db.php';
                                     data:{
                                         labels:['Chinese','Spanish','English','Hindi','Arab','Portuguese','Bengali','Russian','Japanese','Punjabi/Lahnda'],
                                         datasets:[{
-                                            label:'Langage',
+                                            label:'Language',
                                             data:[
                                                 1200000000,
                                                 400000000,
