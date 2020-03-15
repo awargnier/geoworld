@@ -77,7 +77,7 @@ require_once 'inc/manager-db.php';
                         </div>
 
                         <div class="icon-box wow fadeInUp">
-                            <h4 class="title">The languages that speak the most</h4>
+                            <h4 class="title">The most spoken languages</h4>
                             <div class="container">
                                 <canvas id="myChart"></canvas>
                             </div>
