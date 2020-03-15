@@ -180,7 +180,8 @@ WHERE id=:id";
     }
 
 }
-function getCapital($id){
+function getCapital($id)
+{
 
     global $pdo;
     $requete = "SELECT city.* FROM city,country WHERE city.id = country.Capital and country.id = :id ";
@@ -188,8 +189,14 @@ function getCapital($id){
     $prep = $pdo->prepare($requete);
     $prep->bindValue(':id', $id);
     $prep->execute();
-    $result = $prep->fetchAll();
+    if ($requete != 0){
+        $result = $prep->fetchall()[0];
+    }
+    else
+        $result = $prep->fetch();
     return $result;
+
+
 }
 
 function getLanguage($id){

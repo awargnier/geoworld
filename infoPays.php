@@ -41,7 +41,7 @@ $language = getLanguage($id)
         </div>
         <div class="col-sm" align="center">
             <h4>Capital</h4>
-            <?php if (!empty($Capital->Name) ):?>
+            <?php if (!empty($country->Capital) ):?>
             <h5><?php echo $Capital->Name?></h5>
             <?php endif;?>
         </div>
