@@ -27,6 +27,7 @@ $language = getLanguage($id)
 <div align="center">
     <h1> <img src="images/drapeau/<?php echo $drapeau?>.png" width="3%" height="5%"> <?php echo $country->Name ?></h1>
     <a href="MajCountry.php?id=<?php echo(htmlentities($country->id)) ;?>"><button type="button" class="btn btn-outline-danger" >Update</button></a>
+    <a href="https://en.wikipedia.org/wiki/<?php echo $country->Name?>"><button type="button" class="btn btn-outline-danger" >More</button></a>
     <br><br>
 </div>
 <div class="container-fluid">
