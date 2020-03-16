@@ -31,14 +31,24 @@ require_once 'inc/manager-db.php';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
+    <!-- arrow scroll-down -->
+    <link rel="stylesheet" href="regna/css/scroll-down.css">
+
 </head>
 <body>
 
     <section id="hero">
         <div class="hero-container">
-            <h1>Welcome to GeoWorld</h1>
-            <h2>Find out everything that has to be seen about the world</h2>
-            <a href="WorldMap.php" class="btn-get-started">Get Started</a>
+            <div>
+                <h1>Welcome to GeoWorld</h1>
+                <h2>Find out everything that has to be seen about the world</h2>
+                <a href="WorldMap.php" class="btn-get-started">Get Started</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="hero-container">
+            <a class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon="" href="#about"></a>
         </div>
     </section>
     <main id="main">
