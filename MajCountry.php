@@ -2,6 +2,7 @@
 require_once("inc/manager-db.php");
 $id = $_GET['id'];
 $country = getCountryId($id);
+require_once 'inc/connect-db.php';
 
 
 ?>

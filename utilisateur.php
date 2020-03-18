@@ -1,5 +1,6 @@
 <?php
 require_once('header.php');
+require_once 'inc/connect-db.php';
 
 
 require_once("inc/manager-db.php");
@@ -12,6 +13,7 @@ if (isset($_POST['update'])) {
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     deleteUtilisateur($id);
+
 }
 
 $listeUtilisateurs = utilisateurs();

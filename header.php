@@ -50,6 +50,7 @@ $continents = getContinents();
                             <a class="nav-link" href="utilisateur.php">users management</a>
                         <?php endif; ?>
                     </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
                            aria-expanded="false">Continents</a>
@@ -58,9 +59,6 @@ $continents = getContinents();
                             <?php foreach ($continents as $nomContinent): ?>
                                 <a class="dropdown-item" href="home.php?continent=<?php echo(htmlentities($nomContinent->continent)) ?>"><?php echo(htmlentities( $nomContinent->continent)) ?></a>
                             <?php endforeach;?>
-
-
-
                         </div>
                     </li>
                     <li class="nav-item nav-link" >
@@ -69,7 +67,22 @@ $continents = getContinents();
                             }
                             ?>
                     </li>
+                    <?php if (!empty($_SESSION['role']) && $_SESSION['role'] == 'admin' || !empty($_SESSION['role']) && $_SESSION['role'] == 'enseignant' ):?>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="RequeteExplication.php">Requête</a>
+                    </li>
+                    <?php endif;?>
 
+                    <li class="nav-item active">
+                        <?php if (!empty($_SESSION['role']) && $_SESSION['role'] == 'admin' || !empty($_SESSION['role']) && $_SESSION['role'] == 'enseignant'|| !empty($_SESSION['role']) && $_SESSION['role'] == 'user'):?>
+                        <a class="nav-link" href="requete.php">Liste des Requêtes</a>
+                    </li>
+                    <?php endif;?>
+                    <?php if (!empty($_SESSION['role']) && $_SESSION['role'] == 'admin' || !empty($_SESSION['role']) && $_SESSION['role'] == 'enseignant'):?>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="GestionRequete.php">Gestion des Requêtes</a>
+                    <?php endif;?>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">

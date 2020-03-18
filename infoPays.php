@@ -26,7 +26,9 @@ $language = getLanguage($id)
 <body>
 <div align="center">
     <h1> <img src="images/drapeau/<?php echo $drapeau?>.png" width="3%" height="5%"> <?php echo $country->Name ?></h1>
+    <?php if (!empty($_SESSION['role']) && $_SESSION['role'] == 'admin'): ?>
     <a href="MajCountry.php?id=<?php echo(htmlentities($country->id)) ;?>"><button type="button" class="btn btn-outline-danger" >Update</button></a>
+    <?php endif; ?>
     <a href="https://en.wikipedia.org/wiki/<?php echo $country->Name?>"><button type="button" class="btn btn-outline-danger" >More</button></a>
     <br><br>
 </div>

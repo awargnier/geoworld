@@ -27,6 +27,8 @@ function getCountriesByContinent($continent)
 /** Obtenir la liste des pays
  * @return liste d'objets
  */
+
+
 function getAllCountries()
 {
     global $pdo;
@@ -58,7 +60,7 @@ function getContinents()
 function getAuthentification($login, $pass)
 {
     global $pdo;
-    $query = "SELECT * FROM utilisateur where login=:login and password=:pass";
+    $query = "SELECT * FROM requete where login=:login and password=:pass";
     $prep = $pdo->prepare($query);
     $prep->bindValue(':login', $login);
     $prep->bindValue(':pass', $pass);
@@ -77,7 +79,7 @@ function addUser($infos)
     global $pdo;
 
 
-    $requete = ("INSERT INTO utilisateur (login, password, role, nom, prenom) VALUES(:login,:password,:role,:nom,:prenom)");
+    $requete = ("INSERT INTO requete (login, password, role, nom, prenom) VALUES(:login,:password,:role,:nom,:prenom)");
     try {
         $prep = $pdo->prepare($requete);
         $prep->bindValue(':login', $infos['login']);
@@ -117,7 +119,7 @@ function getUtilisateurId($id){
 
 function deleteUtilisateur($id){
     global $pdo;
-    $query = "delete from utilisateur where id=:id ;";
+    $query = "delete from requete where id=:id ;";
     try {
         $prep = $pdo->prepare($query);
         $prep->bindValue(':id', $id);
@@ -211,5 +213,65 @@ function getLanguage($id){
     $result = $prep->fetchAll();
     return $result;
 }
+function createRequete($create)
+{
+    global $pdo;
+        $requete = ("INSERT INTO requete (requete) VALUES(:requete)");
+        try {
+            $prep = $pdo->prepare($requete);
+            $prep->bindValue(':requete', $create['requete']);
+            $prep->execute();
+        } catch (Exception $e) {
+            die ("erreur dans la requete " . $e->getMessage());
+        }
+}
+function getRequete()
+{
+    global $pdo;
+    $query = 'SELECT * FROM requete;';
+    return $pdo->query($query)->fetchAll(PDO::FETCH_OBJ);
+}
+
+function RequeteExecute(){
+
+    global $pdo;
+    if (!empty($_GET['ListeRequete'])){
+        $requete = $_GET['ListeRequete'];
+        $prep = $pdo->prepare($requete);
+        $prep->execute();
+        $result = $prep->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+    }
+}
+
+function deleteRequete($id){
+    global $pdo;
+    $query = "delete from requete where idRequete=:id ;";
+    try {
+        $prep = $pdo->prepare($query);
+        $prep->bindValue(':id', $id);
+        $prep->execute();
+    }
+    catch ( Exception $e ) {
+        die ("erreur dans la requete ".$e->getMessage());
+    }
+}
+
+function updateRequete($parametre)
+{
+    global $pdo;
+    $requete = "update requete set requete=:requete WHERE idRequete=:id";
+    try {
+        $prep = $pdo->prepare($requete);
+        $prep->bindValue(':id', $parametre['id']);
+        $prep->bindValue(':requete', $parametre['requete']);
+        $prep->execute();
+    } catch (Exception $e) {
+        die ("erreur dans la requete " . $e->getMessage());
+    }
+
+}
+
+
 
 

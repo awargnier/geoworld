@@ -22,10 +22,6 @@ if (isset($_POST['update2'])) {
 if (isset($_GET['add'])) {
     addUser($_GET);
 }
-if (isset($_GET['Search'])) {
-
-}
-
 ?>
 
 <body>
@@ -45,5 +41,5 @@ if (isset($_GET['Search'])) {
 
 <?php
 require_once 'javascripts.php';
-require_once 'footer.php';
+require_once 'footer.php';²
 ?>

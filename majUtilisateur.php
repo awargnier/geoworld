@@ -1,5 +1,6 @@
 <?php
 require_once("inc/manager-db.php");
+require_once 'inc/connect-db.php';
 $id = $_GET['id'];
 $utilisateur = getUtilisateurId($id);
 
