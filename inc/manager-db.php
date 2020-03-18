@@ -60,7 +60,7 @@ function getContinents()
 function getAuthentification($login, $pass)
 {
     global $pdo;
-    $query = "SELECT * FROM requete where login=:login and password=:pass";
+    $query = "SELECT * FROM utilisateur where login=:login and password=:pass";
     $prep = $pdo->prepare($query);
     $prep->bindValue(':login', $login);
     $prep->bindValue(':pass', $pass);
@@ -79,7 +79,7 @@ function addUser($infos)
     global $pdo;
 
 
-    $requete = ("INSERT INTO requete (login, password, role, nom, prenom) VALUES(:login,:password,:role,:nom,:prenom)");
+    $requete = ("INSERT INTO utilisateur (login, password, role, nom, prenom) VALUES(:login,:password,:role,:nom,:prenom)");
     try {
         $prep = $pdo->prepare($requete);
         $prep->bindValue(':login', $infos['login']);
@@ -119,7 +119,7 @@ function getUtilisateurId($id){
 
 function deleteUtilisateur($id){
     global $pdo;
-    $query = "delete from requete where id=:id ;";
+    $query = "delete from utilisateur where id=:id ;";
     try {
         $prep = $pdo->prepare($query);
         $prep->bindValue(':id', $id);

@@ -23,8 +23,6 @@ require_once ("header.php");
 
     </form>
 </div>
-<div align="center">
-</div>
 
 
 </html>

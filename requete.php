@@ -35,7 +35,9 @@
                     </form>
                     <br>
                     <h5>Voici le résultat de :</h5>
+                    <?php if (!empty($choice)): ?>
                     <h2><?php print($choice)?></h2>
+                    <?php endif; ?>
                     <br>
 
 
