@@ -41,7 +41,6 @@ require_once 'inc/manager-db.php';
         <h2>Quelques règles avant de commencer : </h2>
         <h2>-Mettre les noms des tables en minuscule </h2>
         <h2>-La table CountryLanguage étant remplie d'id ,vous ne pouvez pas l'afficher
-        <h2>-Vous ne pouvez exécuter que des select</h2>
         <h2>-L'affichage peut prendre un peu de temps </h2>
         <a href="inputRequete.php" class="btn-get-started">Get Started</a>
     </div>
