@@ -9,7 +9,7 @@ require_once 'inc/connect-db.php';
 
 <body>
 <div align="center">
-<form class="form-style-4" action="index.php" method="GET">
+<form class="form-style-4" action="home.php" method="GET">
     <label for="field1">
         <span>Last Name</span><input type="text" name="nom" required="true" />
     </label>

@@ -41,5 +41,5 @@ if (isset($_GET['add'])) {
 
 <?php
 require_once 'javascripts.php';
-require_once 'footer.php';²
+require_once 'footer.php';
 ?>

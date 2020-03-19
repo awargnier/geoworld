@@ -149,15 +149,17 @@ function updateUsers($params)
     }
 
 }
+/* Fonction pour mettre à jour la base de données */
 function updateCountry($infos)
 {
     global $pdo;
+    /* rêquete sql permettant la mise à jour de la base de données */
     $requete = "update country set Code=:Code,Name=:Name,Continent=:Continent,Region=:Region,SurfaceArea=:SurfaceArea,
 IndepYear=:IndepYear,Population=:Population,LifeExpectancy=:LifeExpectancy,GNP=:GNP,GNPOld=:GNPOld,LocalName=:LocalName,
 GovernmentForm=:GovernmentForm,HeadOfState=:HeadOfState,Capital=:Capital,Code2=:Code2 
 WHERE id=:id";
 
-
+    /* récupération de tout les élements présent sur le formulaire et excecution de la requête sql avec les nouvelle données */
     try {
         $prep = $pdo->prepare($requete);
         $prep->bindValue(':id', $infos['id']);
@@ -256,22 +258,6 @@ function deleteRequete($id){
         die ("erreur dans la requete ".$e->getMessage());
     }
 }
-
-function updateRequete($parametre)
-{
-    global $pdo;
-    $requete = "update requete set requete=:requete WHERE idRequete=:id";
-    try {
-        $prep = $pdo->prepare($requete);
-        $prep->bindValue(':id', $parametre['id']);
-        $prep->bindValue(':requete', $parametre['requete']);
-        $prep->execute();
-    } catch (Exception $e) {
-        die ("erreur dans la requete " . $e->getMessage());
-    }
-
-}
-
 
 
 

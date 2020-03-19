@@ -21,13 +21,13 @@ $utilisateur = getUtilisateurId($id);
             <span>Your Name </span><input type="text" name="prenom"  value="<?php echo(htmlentities( $utilisateur->prenom))?>" required="true" />
         </label>
         <label for="field3">
-            <span>Login</span><input type="text" name="role"  value="<?php echo(htmlentities( $utilisateur->role))?>" required="true" />
+            <span>Login</span><input type="text" name="role"  value="<?php echo(htmlentities( $utilisateur->login))?>" required="true" />
         </label>
         <label for="field4">
-            <span>Password</span><input type="text" name="login"  value="<?php echo(htmlentities( $utilisateur->login))?>"  required="true">
+            <span>Password</span><input type="text" name="login"  value="<?php echo(htmlentities( $utilisateur->password))?>"  required="true">
         </label>
         <label for="field5">
-            <span> role </span><input type="text" name="password" value="<?php echo(htmlentities($utilisateur->password))?>" required="true">
+            <span> role </span><input type="text" name="password" value="<?php echo(htmlentities($utilisateur->role))?>" required="true">
         </label>
         <label for="field6">
             <span> </span><input type="hidden" name="id" value="<?php echo(htmlentities($utilisateur->id))?>" required="true">

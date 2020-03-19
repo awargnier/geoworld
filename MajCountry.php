@@ -1,8 +1,10 @@
 <?php
+/* appel du fichier contenant les fonctions */
 require_once("inc/manager-db.php");
+/* récupération de l'id du pays */
 $id = $_GET['id'];
 $country = getCountryId($id);
-require_once 'inc/connect-db.php';
+
 
 
 ?>
@@ -10,9 +12,10 @@ require_once 'inc/connect-db.php';
 <html>
 <header> <link <link href="css/formulaire.css" rel="stylesheet"></header>
 
-
+<!-- création du formulaire -->
     <div align="center">
         <form class="form-style-4" action="index.php" method="POST">
+            <!-- récupération des différentes saisie de l'enseignant tout en affichant les information déja présente dans la base de données -->
             <label for="field1">
                 <input type="hidden" name="id" value="<?php echo(htmlentities($country->id)) ?> required="true">
             </label>
