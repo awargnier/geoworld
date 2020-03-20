@@ -54,8 +54,8 @@
                             <th>SurfaceArea</th>
                             <!--th>IndepYear </th-->
                             <th>Population</th>
-                            <!--th>LifeExpectancy </th>
-                            <th>GNP </th>
+                            <th>LifeExpectancy </th>
+                            <!--th>GNP </th>
                             <th>GNPOld </th>
                             <th>LocalName </th>
                             <th>GovernmentForm </th>
@@ -77,8 +77,8 @@
                                 <td> <?php echo(htmlentities($value->SurfaceArea)); ?> </td>
                                 <td> <?php echo(htmlentities($value->IndepYear)); ?> </td>
                                 <td> <?php echo(htmlentities($value->Population)); ?> </td>
-                                <!--td> <?php echo(htmlentities($value->LifeExpectancy)); ?> </td>
-                <td> <?php echo(htmlentities($value->GNP)); ?> </td>
+                                <td> <?php echo(htmlentities($value->LifeExpectancy)); ?> </td>
+                <!--td> <?php echo(htmlentities($value->GNP)); ?> </td>
                 <td> <?php echo(htmlentities($value->GNPOld)); ?> </td>
                 <td> <?php echo(htmlentities($value->LocalName)); ?> </td>
                 <td> <?php echo(htmlentities($value->GovernmentForm)); ?> </td>
